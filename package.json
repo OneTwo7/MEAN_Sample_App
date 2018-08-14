@@ -1,0 +1,13 @@
+{
+  "name": "sample_app",
+  "version": "0.0.1",
+  "description": "A reinvention of Sample App developed in Rails Tutorial by Michael Hartl using MEAN stack.",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:OneTwo7/MEAN_Sample_App.git"
+  },
+  "author": "onetwo7",
+  "license": "MIT"
+}
