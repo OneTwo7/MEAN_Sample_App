@@ -3,11 +3,28 @@
   "version": "0.0.1",
   "description": "A reinvention of Sample App developed in Rails Tutorial by Michael Hartl using MEAN stack.",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node server",
+    "gulp:watch": "gulp",
+    "dev:server": "nodemon --watch server.js",
+    "dev": "npm-run-all --parallel gulp:watch dev:server"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:OneTwo7/MEAN_Sample_App.git"
   },
   "author": "onetwo7",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "angular": "^1.7.3",
+    "angular-route": "^1.7.3",
+    "gulp": "3.9.1",
+    "gulp-concat": "^2.6.1",
+    "nodemon": "^1.18.3",
+    "npm-run-all": "^4.1.3"
+  }
 }
