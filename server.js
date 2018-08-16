@@ -15,7 +15,7 @@ app.get('/partials/:partialPath', (req, res) => {
   res.render(path.join('partials', req.params.partialPath));
 });
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.render('main');
 });
 

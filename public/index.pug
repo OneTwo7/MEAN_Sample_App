@@ -1,10 +1,10 @@
 doctype html
-html(lang='en')
+html(lang='en', ng-app='app')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1, width=device-width, shrink-to-fit=no')
-    title Sample App
+    title(ng-bind='title')
     base(href='/')
-  body(ng-app='app')
+  body
     block main-content
     include /views/partials/scripts
