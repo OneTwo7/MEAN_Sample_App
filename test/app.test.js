@@ -46,4 +46,34 @@ describe('app', function () {
     });
   });
 
+  it('should get contact', function() {
+
+    inject(function($route, $location, $rootScope, $httpBackend) {
+
+      expect($route.current).toBeUndefined();
+      $httpBackend.expectGET('/partials/contact').respond(200);
+      $location.path('/contact');
+      $rootScope.$digest();
+
+      expect($location.path()).toBe('/contact');
+      expect($route.current.templateUrl).toBe('/partials/contact');
+
+    });
+  });
+
+  it('should get signup', function() {
+
+    inject(function($route, $location, $rootScope, $httpBackend) {
+
+      expect($route.current).toBeUndefined();
+      $httpBackend.expectGET('/partials/signup').respond(200);
+      $location.path('/signup');
+      $rootScope.$digest();
+
+      expect($location.path()).toBe('/signup');
+      expect($route.current.templateUrl).toBe('/partials/signup');
+
+    });
+  });
+
 });

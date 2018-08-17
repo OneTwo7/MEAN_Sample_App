@@ -5,17 +5,24 @@ app.config(['$routeProvider', '$locationProvider',
     $locationProvider.html5Mode(true);
     $routeProvider
     .when('/', {
-      title: 'Sample App',
       templateUrl: '/partials/home',
       controller: 'homeController'
     })
     .when('/help', {
-      title: 'Sample App | Help',
+      title: 'Help',
       templateUrl: '/partials/help'
     })
     .when('/about', {
-      title: 'Sample App | About',
+      title: 'About',
       templateUrl: '/partials/about'
+    })
+    .when('/contact', {
+      title: 'Contact',
+      templateUrl: '/partials/contact'
+    })
+    .when('/signup', {
+      title: 'Sign Up',
+      templateUrl: '/partials/signup'
     })
     .otherwise({
       redirectTo: '/'
@@ -25,12 +32,13 @@ app.config(['$routeProvider', '$locationProvider',
 
 app.controller('homeController', ['$scope',
   function ($scope) {
-    $scope.welcome = 'Welcome to Sample App';
+    $scope.welcome = 'Welcome to the Sample App';
   }
 ]);
 
 app.run(['$location', '$rootScope', function ($location, $rootScope) {
   $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-    $rootScope.title = current.$$route.title;
+    var title = current.$$route.title;
+    $rootScope.title = title ? 'Sample App | ' + title : 'Sample App';
   });
 }]);

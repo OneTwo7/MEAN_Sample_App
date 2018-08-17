@@ -1,0 +1,29 @@
+@import 'colors';
+@import 'typography';
+@import 'header';
+@import 'footer';
+
+body {
+  padding-top: 66px;
+}
+
+main {
+  padding-top: 2rem;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.jumbotron {
+  margin-top: -2rem;
+  p {
+    font-size: 1.4rem;
+    color: $gray-light;
+    letter-spacing: -1px;
+  }
+}

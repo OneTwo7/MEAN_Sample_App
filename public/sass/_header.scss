@@ -1,0 +1,22 @@
+#logo {
+  font-size: 1.7em;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 5px 10px;
+  font-weight: bold;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+header {
+  .nav-link {
+    color: $white;
+    &:hover {
+      color: $white;
+      background: rgba(255,255,255,.2);
+    }
+  }
+}

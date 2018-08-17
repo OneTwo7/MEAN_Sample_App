@@ -5,6 +5,10 @@ html(lang='en', ng-app='app')
     meta(name='viewport', content='initial-scale=1, width=device-width, shrink-to-fit=no')
     title(ng-bind='title')
     base(href='/')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(rel='stylesheet', href='/dist/style.css')
   body
+    include /views/partials/header
     block main-content
+    include /views/partials/footer
     include /views/partials/scripts
