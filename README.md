@@ -8,6 +8,6 @@ MEAN Stack version of [Rails Sample App](https://bitbucket.org/railstutorial/sam
 
 * Express
 
-* Angular 1.x
+* AngularJS
 
 * Node.js

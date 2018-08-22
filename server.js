@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+require('./app/config/mongoose');
+
 app.locals.basedir = path.join(__dirname, 'public');
 
 app.set('views', path.join(__dirname, 'public/views'));
